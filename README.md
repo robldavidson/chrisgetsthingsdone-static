@@ -46,25 +46,35 @@ actually presses play.)
 
 ## Support / sign-up form
 
-The `.support__form-placeholder` div in `index.html`'s `#support`
-section is where a sign-up/endorsement-request form goes. A few free
-options that work on a static GitHub Pages site (no backend of your
-own needed):
+The `.support__form` div in `index.html`'s `#support` section holds a
+**Jotform** embed (form ID `262994968304069`) via their `<iframe>` +
+`for-form-embed-handler.js` auto-resize script — not their "source
+code" embed, which dumps Jotform's full JS/CSS (including Prototype.js,
+whose `$()` isn't jQuery's and can collide with other scripts) directly
+into this page. The iframe keeps all of that walled off in its own
+document instead.
+
+One thing already fixed here: Jotform's default snippet includes
+`onload="window.parent.scrollTo(0,0)"` on the iframe, which yanks the
+whole page back to the top every time the iframe (re)loads — fine if
+the form IS the page, actively broken for a form sitting mid-page on a
+one-pager like this (someone clicks "Get Involved", scrolls to
+#support, and the page jumps back to the hero). That attribute has
+been removed; don't re-add it if you regenerate the embed code from
+Jotform later.
+
+Jotform's free tier caps at 100 submissions/month and 5 forms, and
+shows their branding footer (visible at the bottom of the embedded
+form) unless you're on a paid plan.
+
+A couple of free alternatives, if this ever needs revisiting:
 
 - **Formspree** — you write a plain `<form>` in your own HTML pointed
   at a Formspree endpoint URL; it emails you the submissions. Because
   it's your own markup, it matches the rest of the page's design
   exactly rather than sitting in an iframe. Free tier: 50
-  submissions/month. Best fit if you want the form to look native.
+  submissions/month.
 - **Google Forms** — zero setup, completely free, no submission cap.
   Embed via the iframe Google gives you under Send > Embed HTML.
   Responses land in a Google Sheet. Looks like a Google Form (limited
-  styling), but it's the fastest way to get something working today.
-- **Jotform** — nicer-looking embeddable forms and conditional logic
-  out of the box; free tier caps at 100 submissions/month and 5 forms,
-  and shows Jotform's own branding link unless you're on a paid plan.
-- **Tally** — similar to Jotform, generous free tier, clean embed,
-  worth a look if Formspree's plain-form approach doesn't fit.
-
-For a small campaign site, Formspree (native look, no iframe) or
-Google Forms (fastest to set up) are the two worth starting with.
+  styling), but it's the fastest way to get something working.

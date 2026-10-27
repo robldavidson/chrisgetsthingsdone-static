@@ -430,7 +430,7 @@ a {
 	text-align: center;
 }
 .support__inner {
-	max-width: 700px;
+	max-width: 780px;
 	margin: 0 auto;
 	padding: 0 24px;
 }
@@ -438,11 +438,9 @@ a {
 	color: var(--orange);
 	font-size: 1.9rem;
 }
-.support__form-placeholder {
-	margin-top: 24px;
-	padding: 48px 24px;
-	border: 2px dashed #ddd;
-	color: #999;
+.support__form {
+	margin-top: 8px;
+	text-align: left;
 }
 
 /* ==========================================================================
