@@ -267,19 +267,36 @@ a {
 	text-align: center;
 	padding: 0 12px;
 }
-.endorsement-card img {
+/* Fixed-height slot, present on every card whether or not it holds a
+   photo — without this, a card with no photo (no real headshot
+   supplied for that endorser) would start its name right at the top,
+   misaligned against photo cards sitting alongside it in the carousel. */
+.endorsement-card__photo {
+	height: 110px;
+	margin: 0 auto 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.endorsement-card__photo img {
 	width: 110px;
 	height: 110px;
 	object-fit: cover;
 	border-radius: 50%;
-	margin: 0 auto 16px;
 	border: 3px solid rgba(255, 255, 255, 0.2);
 	transition: width 0.25s ease, height 0.25s ease, border-color 0.25s ease;
 }
 .endorsement-card h3 {
 	color: #fff;
 	font-size: 1.05rem;
-	margin: 0 0 8px;
+	margin: 0 0 4px;
+}
+.endorsement-card .endorsement-card__role {
+	color: var(--orange);
+	font-size: 0.8rem;
+	font-weight: 600;
+	margin: 0 0 10px;
+	opacity: 1;
 }
 .endorsement-card p {
 	color: #d9e0ea;
@@ -298,7 +315,7 @@ a {
 .swiper-slide-active {
 	opacity: 1;
 }
-.swiper-slide-active .endorsement-card img {
+.swiper-slide-active .endorsement-card__photo img {
 	width: 140px;
 	height: 140px;
 	border-color: var(--orange);
@@ -339,6 +356,14 @@ a {
 .plan__text h2 {
 	color: var(--heading);
 	font-size: 1.9rem;
+}
+.plan__quote {
+	color: var(--navy);
+	font-size: 1.3rem;
+	font-weight: 700;
+	font-style: italic;
+	line-height: 1.4;
+	margin: 0 0 20px;
 }
 .plan__text h3 {
 	color: var(--heading);
@@ -392,7 +417,7 @@ a {
 	padding: 0 24px;
 	display: flex;
 	gap: 48px;
-	align-items: center;
+	align-items: flex-start;
 }
 .about__figure {
 	flex: 0 0 auto;
@@ -406,9 +431,18 @@ a {
 	color: #fff;
 	font-size: 1.9rem;
 }
+.about__text h3 {
+	color: #fff;
+	font-size: 1.1rem;
+	margin: 24px 0 6px;
+}
+.about__text h3:first-of-type {
+	margin-top: 20px;
+}
 .about__text p {
 	color: #fff;
-	margin: 0 0 10px;
+	opacity: 0.9;
+	margin: 0 0 4px;
 }
 @media (max-width: 780px) {
 	.about__inner {
