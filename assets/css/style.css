@@ -270,9 +270,14 @@ a {
 /* Fixed-height slot, present on every card whether or not it holds a
    photo — without this, a card with no photo (no real headshot
    supplied for that endorser) would start its name right at the top,
-   misaligned against photo cards sitting alongside it in the carousel. */
+   misaligned against photo cards sitting alongside it in the carousel.
+   Height is 140px (the ACTIVE/enlarged photo size below), not 110px
+   (the resting size) — Swiper clips anything overflowing a slide's own
+   box, so sizing this to only the resting photo meant the active
+   slide's larger photo overflowed upward out of its box and got cut
+   off by that clip, right under the heading above the carousel. */
 .endorsement-card__photo {
-	height: 110px;
+	height: 140px;
 	margin: 0 auto 16px;
 	display: flex;
 	align-items: center;
