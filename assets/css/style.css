@@ -236,11 +236,17 @@ a {
 }
 
 /* ==========================================================================
-   Endorsements — full-bleed black band, orange heading, Swiper carousel
-   with the centred slide scaled larger than its neighbours.
+   Endorsements — full-bleed ORANGE band (the one section that breaks
+   from the black/white rhythm everywhere else, so black doesn't end up
+   as the dominant colour across the whole page), black text/borders,
+   with white used sparingly (the role badge, the active pagination
+   dot) rather than as body text — white-on-this-orange measures a
+   poor contrast ratio (roughly 2.3:1, well under WCAG AA's 4.5:1),
+   black-on-orange is closer to 10:1, so black carries the actual
+   reading text and white stays decorative/short-label only.
    ========================================================================== */
 .endorsements {
-	background: var(--dark);
+	background: var(--orange);
 	padding: 70px 0 56px;
 	text-align: center;
 }
@@ -251,11 +257,11 @@ a {
 }
 .endorsements .quote-mark {
 	font-size: 2.6rem;
-	color: var(--orange);
+	color: #000;
 	line-height: 1;
 }
 .endorsements h2 {
-	color: var(--orange);
+	color: #000;
 	font-size: 1.8rem;
 	margin: 6px 0 40px;
 }
@@ -263,7 +269,7 @@ a {
 	padding-bottom: 48px;
 }
 .endorsement-card {
-	color: #fff;
+	color: #000;
 	text-align: center;
 	padding: 0 12px;
 }
@@ -288,26 +294,32 @@ a {
 	height: 110px;
 	object-fit: cover;
 	border-radius: 50%;
-	border: 3px solid rgba(255, 255, 255, 0.2);
+	border: 3px solid rgba(0, 0, 0, 0.35);
 	transition: width 0.25s ease, height 0.25s ease, border-color 0.25s ease;
 }
 .endorsement-card h3 {
-	color: #fff;
+	color: #000;
 	font-size: 1.05rem;
-	margin: 0 0 4px;
+	margin: 0 0 8px;
 }
+/* A small black pill with white text, rather than bare white text on
+   the orange band itself — keeps a touch of white in the card without
+   relying on white-on-orange contrast for anything legible. */
 .endorsement-card .endorsement-card__role {
-	color: var(--orange);
-	font-size: 0.8rem;
+	display: inline-block;
+	background: #000;
+	color: #fff;
+	font-size: 0.72rem;
 	font-weight: 600;
-	margin: 0 0 10px;
+	padding: 3px 10px;
+	margin: 0 0 12px;
 	opacity: 1;
 }
 .endorsement-card p {
-	color: #e6e6e6;
+	color: #000;
 	font-size: 0.92rem;
 	margin: 0;
-	opacity: 0.8;
+	opacity: 0.75;
 	transition: opacity 0.25s ease;
 }
 /* The centred slide (Swiper's centeredSlides mode) reads as the
@@ -323,17 +335,17 @@ a {
 .swiper-slide-active .endorsement-card__photo img {
 	width: 140px;
 	height: 140px;
-	border-color: var(--orange);
+	border-color: #000;
 }
 .swiper-slide-active .endorsement-card p {
 	opacity: 1;
 }
 .endorsements .swiper-pagination-bullet {
-	background: #fff;
-	opacity: 0.4;
+	background: #000;
+	opacity: 0.35;
 }
 .endorsements .swiper-pagination-bullet-active {
-	background: var(--orange);
+	background: #fff;
 	opacity: 1;
 }
 
