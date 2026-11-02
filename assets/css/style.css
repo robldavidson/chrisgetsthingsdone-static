@@ -1,5 +1,5 @@
 :root {
-	--navy: #06305f;
+	--dark: #000000;
 	--orange: #faa61a;
 	--heading: #1a1a1a;
 	--body: #666666;
@@ -51,7 +51,7 @@ a {
 
 /* ==========================================================================
    Buttons — square corners (no border-radius), orange outline, transparent
-   fill. Two text-colour variants: white (used on the blue CTA band) and
+   fill. Two text-colour variants: white (used on the black CTA band) and
    orange (used on white backgrounds).
    ========================================================================== */
 .btn {
@@ -70,7 +70,7 @@ a {
 }
 .btn--white:hover {
 	background: var(--orange);
-	color: var(--navy);
+	color: var(--dark);
 }
 .btn--orange {
 	color: var(--orange);
@@ -172,7 +172,7 @@ a {
 	align-items: flex-end;
 	background-size: cover;
 	background-position: center;
-	background-color: var(--navy);
+	background-color: var(--dark);
 }
 .hero__inner {
 	max-width: 1200px;
@@ -190,10 +190,10 @@ a {
 }
 
 /* ==========================================================================
-   CTA band — full-bleed, chunky (generous padding), blue background.
+   CTA band — full-bleed, chunky (generous padding), black background.
    ========================================================================== */
 .cta-band {
-	background: var(--navy);
+	background: var(--dark);
 	padding: 48px 24px;
 	text-align: center;
 }
@@ -236,11 +236,11 @@ a {
 }
 
 /* ==========================================================================
-   Endorsements — full-bleed blue band, orange heading, Swiper carousel
+   Endorsements — full-bleed black band, orange heading, Swiper carousel
    with the centred slide scaled larger than its neighbours.
    ========================================================================== */
 .endorsements {
-	background: var(--navy);
+	background: var(--dark);
 	padding: 70px 0 56px;
 	text-align: center;
 }
@@ -304,7 +304,7 @@ a {
 	opacity: 1;
 }
 .endorsement-card p {
-	color: #d9e0ea;
+	color: #e6e6e6;
 	font-size: 0.92rem;
 	margin: 0;
 	opacity: 0.8;
@@ -363,7 +363,7 @@ a {
 	font-size: 1.9rem;
 }
 .plan__quote {
-	color: var(--navy);
+	color: var(--dark);
 	font-size: 1.3rem;
 	font-weight: 700;
 	font-style: italic;
@@ -407,12 +407,12 @@ a {
 }
 
 /* ==========================================================================
-   About — full-bleed blue band, white text, photo left / stacked
+   About — full-bleed black band, white text, photo left / stacked
    statements right. Wraps to a single column (photo on top) on
    narrower screens.
    ========================================================================== */
 .about {
-	background: var(--navy);
+	background: var(--dark);
 	color: #fff;
 	padding: 70px 0;
 }
