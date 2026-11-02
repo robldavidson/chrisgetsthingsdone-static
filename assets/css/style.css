@@ -528,11 +528,42 @@ a {
 }
 
 /* ==========================================================================
-   Footer
+   Contact — orange band (black text, same reasoning as the
+   endorsements band: white-on-this-orange fails contrast, black
+   passes comfortably).
+   ========================================================================== */
+.contact {
+	padding: 56px 0;
+	background: var(--orange);
+	text-align: center;
+}
+.contact__inner {
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 0 24px;
+}
+.contact h2 {
+	color: #000;
+	font-size: 1.9rem;
+}
+.contact p {
+	color: #000;
+	margin: 0;
+}
+.contact a {
+	color: #000;
+	font-weight: 700;
+	text-decoration: underline;
+}
+
+/* ==========================================================================
+   Footer — a thin black band, not part of the colour rhythm above
+   (always the same regardless of what band it follows).
    ========================================================================== */
 .site-footer {
-	padding: 28px 24px;
+	padding: 18px 24px;
 	text-align: center;
 	font-size: 0.85rem;
-	color: #999;
+	background: #000;
+	color: #ccc;
 }
