@@ -26,6 +26,21 @@ document.addEventListener('DOMContentLoaded', function () {
 			el: '.swiper-pagination',
 			clickable: true,
 		},
+		navigation: {
+			nextEl: '.endorsements-swiper .swiper-button-next',
+			prevEl: '.endorsements-swiper .swiper-button-prev',
+		},
+		// pauseOnMouseEnter (desktop) and disableOnInteraction: false
+		// (touch/click — a tap on an arrow or dot doesn't permanently
+		// kill autoplay) are both here on purpose: an endlessly-moving
+		// carousel with no way to stop it is an accessibility problem
+		// (WCAG 2.2.2) — hovering it, or just interacting with it at
+		// all, is this site's "pause" control.
+		autoplay: {
+			delay: 4500,
+			pauseOnMouseEnter: true,
+			disableOnInteraction: false,
+		},
 		breakpoints: {
 			700: {
 				slidesPerView: 3,

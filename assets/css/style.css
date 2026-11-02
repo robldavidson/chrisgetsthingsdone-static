@@ -355,6 +355,32 @@ a {
 	background: #fff;
 	opacity: 1;
 }
+/* Prev/next arrows — a solid black circle (not Swiper's default bare
+   icon) so they read clearly as controls against the orange band,
+   positioned by eye over the photo row rather than Swiper's default
+   dead-centre (which would land on the quote text, further down than
+   the photos now that the quote-mark badge up top pushed everything
+   else down a little). */
+.endorsements .swiper-button-prev,
+.endorsements .swiper-button-next {
+	top: 70px;
+	width: 36px;
+	height: 36px;
+	background: #000;
+	border-radius: 50%;
+	color: #fff;
+}
+.endorsements .swiper-button-prev::after,
+.endorsements .swiper-button-next::after {
+	font-size: 14px;
+	font-weight: 700;
+}
+@media (max-width: 680px) {
+	.endorsements .swiper-button-prev,
+	.endorsements .swiper-button-next {
+		display: none;
+	}
+}
 
 /* ==========================================================================
    Plan — white band, heading/paragraph blocks on the left (grey body
