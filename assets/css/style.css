@@ -259,12 +259,12 @@ a {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 56px;
-	height: 56px;
+	width: 30px;
+	height: 30px;
 	margin: 0 auto;
 	background: #000;
 	color: #fff;
-	font-size: 2rem;
+	font-size: 1.1rem;
 	line-height: 1;
 }
 .endorsements h2 {
