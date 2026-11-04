@@ -577,3 +577,82 @@ a {
 	font-size: 0.7rem;
 	color: #888;
 }
+.site-footer__links a {
+	color: var(--orange);
+	text-decoration: underline;
+}
+.site-footer__links a:hover {
+	color: #fff;
+}
+
+/* ==========================================================================
+   Simple page header — Privacy/Cookie Policy pages have no hero photo
+   behind them, so they get a plain black bar instead of the homepage's
+   transparent-over-photo nav treatment.
+   ========================================================================== */
+.simple-header {
+	background: #000;
+	padding: 20px 0;
+}
+.simple-header__inner {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 24px;
+}
+.simple-header a {
+	color: var(--orange);
+	font-weight: 800;
+	font-size: 1.2rem;
+	text-decoration: none;
+}
+
+/* ==========================================================================
+   Legal/document pages (Privacy Statement, Cookie Policy) — plain
+   readable prose, not one of the full-bleed coloured bands used
+   elsewhere on the site.
+   ========================================================================== */
+.legal-page {
+	max-width: 760px;
+	margin: 0 auto;
+	padding: 56px 24px 80px;
+}
+.legal-page h1 {
+	font-size: 2rem;
+	margin-bottom: 8px;
+}
+.legal-page .legal-updated {
+	color: var(--body);
+	font-size: 0.85rem;
+	margin: 0 0 32px;
+}
+.legal-page h2 {
+	font-size: 1.3rem;
+	margin: 36px 0 12px;
+}
+.legal-page p,
+.legal-page li {
+	color: var(--body);
+	font-size: 1rem;
+}
+.legal-page ul {
+	padding-left: 20px;
+	margin: 0 0 16px;
+}
+.legal-page li {
+	margin-bottom: 8px;
+}
+.legal-page a {
+	color: var(--dark);
+	text-decoration: underline;
+}
+.legal-page a:hover {
+	color: var(--orange);
+}
+.legal-page .legal-note {
+	margin-top: 48px;
+	padding: 16px 20px;
+	background: #faf8f3;
+	border-left: 3px solid var(--orange);
+	font-size: 0.9rem;
+	color: var(--body);
+}
