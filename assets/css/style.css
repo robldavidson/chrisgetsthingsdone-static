@@ -526,6 +526,62 @@ a {
 	margin-top: 8px;
 	text-align: left;
 }
+.support__form-placeholder {
+	padding: 48px 24px;
+	text-align: center;
+	border: 2px dashed #ddd;
+}
+.support__form-placeholder p {
+	margin: 0 0 16px;
+	color: var(--body);
+}
+
+/* ==========================================================================
+   Cookie consent banner — fixed to the bottom, shown on first visit
+   (no choice stored yet) and again via any "manage cookie
+   preferences" control. Both buttons use the same style/size
+   deliberately — nudging one option over the other (typically by
+   making "Accept" the visually prominent one) is the kind of pattern
+   the ICO has specifically called out as invalid consent.
+   ========================================================================== */
+.cookie-banner {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1000;
+	background: #000;
+	color: #fff;
+	padding: 20px 24px;
+	box-shadow: 0 -2px 16px rgba(0, 0, 0, 0.35);
+}
+.cookie-banner__inner {
+	max-width: 1100px;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+}
+.cookie-banner p {
+	margin: 0;
+	flex: 1 1 320px;
+	font-size: 0.9rem;
+}
+.cookie-banner a {
+	color: var(--orange);
+	text-decoration: underline;
+}
+.cookie-banner__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+}
+.cookie-banner__actions .btn {
+	font-size: 0.85rem;
+	padding: 10px 20px;
+}
 
 /* ==========================================================================
    Contact — orange band (black text, same reasoning as the
@@ -648,11 +704,25 @@ a {
 .legal-page a:hover {
 	color: var(--orange);
 }
-.legal-page .legal-note {
-	margin-top: 48px;
-	padding: 16px 20px;
-	background: #faf8f3;
-	border-left: 3px solid var(--orange);
-	font-size: 0.9rem;
+.legal-table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 0 0 24px;
+	font-size: 0.92rem;
+}
+.legal-table th,
+.legal-table td {
+	text-align: left;
+	padding: 10px 12px;
+	border: 1px solid #e5e5e5;
 	color: var(--body);
+}
+.legal-table th {
+	background: #faf8f3;
+	color: var(--heading);
+	font-weight: 700;
+}
+.legal-page .btn {
+	font-size: 0.9rem;
+	padding: 10px 24px;
 }

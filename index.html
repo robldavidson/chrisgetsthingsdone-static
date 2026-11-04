@@ -186,18 +186,22 @@
 		<div class="support__inner">
 			<h2>Support Chris</h2>
 			<div class="support__form">
-				<iframe
-					id="JotFormIFrame-262994968304069"
-					title="Support Chris"
-					allowtransparency="true"
-					allow="geolocation; microphone; camera; fullscreen; payment"
-					src="https://form.jotform.com/262994968304069"
-					frameborder="0"
-					style="min-width:100%;max-width:100%;height:539px;border:none;"
-					scrolling="no"
-				></iframe>
-				<script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"></script>
-				<script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-262994968304069']", "https://form.jotform.com/")</script>
+				<div class="support__form-placeholder" id="support-form-placeholder">
+					<p>To support Chris or provide an endorsement, please allow cookies.</p>
+					<button type="button" class="btn btn--orange js-manage-cookies">Manage cookie preferences</button>
+				</div>
+				<div id="support-form-embed" hidden>
+					<iframe
+						id="JotFormIFrame-262994968304069"
+						title="Support Chris"
+						allowtransparency="true"
+						allow="geolocation; microphone; camera; fullscreen; payment"
+						data-src="https://form.jotform.com/262994968304069"
+						frameborder="0"
+						style="min-width:100%;max-width:100%;height:539px;border:none;"
+						scrolling="no"
+					></iframe>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -217,6 +221,16 @@
 	<p class="site-footer__legal">Appearance in photos on this page does not necessarily constitute an endorsement</p>
 	<p class="site-footer__legal">Published and promoted by C White, 17 Cunningham Avenue, St Albans AL1 1JJ</p>
 </footer>
+
+<div class="cookie-banner" id="cookie-banner" hidden>
+	<div class="cookie-banner__inner">
+		<p>We use a strictly necessary cookie to remember your choice here. If you accept, we'll also load our sign-up form, provided by Jotform, which sets its own cookies. <a href="cookies.html">Read our Cookie Policy</a></p>
+		<div class="cookie-banner__actions">
+			<button type="button" class="btn btn--white" id="cookie-reject">Reject non-essential</button>
+			<button type="button" class="btn btn--white" id="cookie-accept">Accept</button>
+		</div>
+	</div>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="assets/js/main.js"></script>
