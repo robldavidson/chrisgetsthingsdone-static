@@ -567,3 +567,13 @@ a {
 	background: #000;
 	color: #ccc;
 }
+.site-footer p {
+	margin: 0 0 6px;
+}
+.site-footer p:last-child {
+	margin-bottom: 0;
+}
+.site-footer__legal {
+	font-size: 0.7rem;
+	color: #888;
+}
