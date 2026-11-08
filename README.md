@@ -31,18 +31,26 @@ default (no view limits); Vimeo is worth it if you want a cleaner
 player with no suggested-video sidebar (their free tier caps total
 storage, which is fine for a handful of campaign videos).
 
-Replace the placeholder in `index.html`'s `.video-embed` div with
-something like:
+The `.video-embed` div in `index.html`'s `#video` section currently
+holds:
 
 ```html
-<iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID"
-	title="Campaign video" frameborder="0"
+<iframe src="https://www.youtube-nocookie.com/embed/dnIm7XdJVxk"
+	title="Chris White for English Party Chair" frameborder="0"
 	allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 	allowfullscreen></iframe>
 ```
 
-(`youtube-nocookie.com` avoids setting tracking cookies until someone
-actually presses play.)
+To swap in a different video, replace `dnIm7XdJVxk` with the new
+video's ID (the part after `youtu.be/` or `v=` in its URL) and update
+the `title` attribute to match.
+
+`youtube-nocookie.com` is YouTube's privacy-enhanced embed domain —
+checked directly (including while the video was actually playing, not
+just on load): it sets no cookies at all. This is also documented in
+`cookies.html`, so if the video is ever swapped for a different
+hosting approach (e.g. Vimeo), that page's "Campaign video" section
+needs updating to match.
 
 ## Support / sign-up form
 
