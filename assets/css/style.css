@@ -494,6 +494,27 @@ a {
 	opacity: 0.9;
 	margin: 0 0 4px;
 }
+.about__quote {
+	margin: 28px 0 0;
+	padding: 0 0 0 18px;
+	border-left: 3px solid var(--orange);
+}
+.about__quote p {
+	color: #fff;
+	font-size: 1.1rem;
+	font-weight: 700;
+	font-style: italic;
+	line-height: 1.4;
+	opacity: 1;
+	margin: 0 0 8px;
+}
+.about__quote cite {
+	display: block;
+	color: #fff;
+	opacity: 0.75;
+	font-size: 0.9rem;
+	font-style: normal;
+}
 @media (max-width: 780px) {
 	.about__inner {
 		flex-direction: column;
