@@ -52,30 +52,20 @@ just on load): it sets no cookies at all. This is also documented in
 hosting approach (e.g. Vimeo), that page's "Campaign video" section
 needs updating to match.
 
-## Support / sign-up form
+## Support section
 
-The `.support__form` div in `index.html`'s `#support` section holds a
-**Jotform** embed (form ID `262994968304069`) via their `<iframe>` +
-`for-form-embed-handler.js` auto-resize script — not their "source
-code" embed, which dumps Jotform's full JS/CSS (including Prototype.js,
-whose `$()` isn't jQuery's and can collide with other scripts) directly
-into this page. The iframe keeps all of that walled off in its own
-document instead.
+`index.html`'s `#support` section originally held a **Jotform**
+sign-up/endorsement embed, gated behind a cookie-consent banner
+(`main.js` handled the Accept/Reject choice and conditionally loaded
+the iframe + Jotform's auto-resize script). Both were removed once
+voting opened: the section now just holds a static thank-you message
+in `.support__message`, telling people to use their vote. The cookie
+banner, its CSS, and the consent JS in `main.js` were removed at the
+same time — with no third-party embed left to gate, there was nothing
+left for a cookie banner to do. `cookies.html` and `privacy.html` were
+updated to match (the site sets no cookies at all now).
 
-One thing already fixed here: Jotform's default snippet includes
-`onload="window.parent.scrollTo(0,0)"` on the iframe, which yanks the
-whole page back to the top every time the iframe (re)loads — fine if
-the form IS the page, actively broken for a form sitting mid-page on a
-one-pager like this (someone clicks "Get Involved", scrolls to
-#support, and the page jumps back to the hero). That attribute has
-been removed; don't re-add it if you regenerate the embed code from
-Jotform later.
-
-Jotform's free tier caps at 100 submissions/month and 5 forms, and
-shows their branding footer (visible at the bottom of the embedded
-form) unless you're on a paid plan.
-
-A couple of free alternatives, if this ever needs revisiting:
+If a sign-up form is ever needed again, a couple of free options:
 
 - **Formspree** — you write a plain `<form>` in your own HTML pointed
   at a Formspree endpoint URL; it emails you the submissions. Because
@@ -86,3 +76,7 @@ A couple of free alternatives, if this ever needs revisiting:
   Embed via the iframe Google gives you under Send > Embed HTML.
   Responses land in a Google Sheet. Looks like a Google Form (limited
   styling), but it's the fastest way to get something working.
+
+Either of those sets its own third-party cookies once submitted, so
+reintroducing one means reintroducing the Cookie Policy table and
+(arguably) a consent banner too.

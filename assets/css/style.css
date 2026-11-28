@@ -543,65 +543,13 @@ a {
 	color: var(--orange);
 	font-size: 1.9rem;
 }
-.support__form {
+.support__message {
 	margin-top: 8px;
-	text-align: left;
 }
-.support__form-placeholder {
-	padding: 48px 24px;
-	text-align: center;
-	border: 2px dashed #ddd;
-}
-.support__form-placeholder p {
-	margin: 0 0 16px;
+.support__message p {
 	color: var(--body);
-}
-
-/* ==========================================================================
-   Cookie consent banner — fixed to the bottom, shown on first visit
-   (no choice stored yet) and again via any "manage cookie
-   preferences" control. Both buttons use the same style/size
-   deliberately — nudging one option over the other (typically by
-   making "Accept" the visually prominent one) is the kind of pattern
-   the ICO has specifically called out as invalid consent.
-   ========================================================================== */
-.cookie-banner {
-	position: fixed;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: 1000;
-	background: #000;
-	color: #fff;
-	padding: 20px 24px;
-	box-shadow: 0 -2px 16px rgba(0, 0, 0, 0.35);
-}
-.cookie-banner__inner {
-	max-width: 1100px;
-	margin: 0 auto;
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: space-between;
-	gap: 16px;
-}
-.cookie-banner p {
-	margin: 0;
-	flex: 1 1 320px;
-	font-size: 0.9rem;
-}
-.cookie-banner a {
-	color: var(--orange);
-	text-decoration: underline;
-}
-.cookie-banner__actions {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 12px;
-}
-.cookie-banner__actions .btn {
-	font-size: 0.85rem;
-	padding: 10px 20px;
+	font-size: 1.15rem;
+	line-height: 1.5;
 }
 
 /* ==========================================================================
